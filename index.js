@@ -6,13 +6,13 @@
 */
 
 // Dependencies
-const router = require('./lib/requestHandler');
+const requestHandler = require('./lib/requestHandler');
 const path = require('path');
 
-router.loadModules(path.join(__dirname, './lib/routes'),function(err){
+requestHandler.loadModules(path.join(__dirname, './lib/routes'),function(err){
     if(!err){
-        console.log(router.moduleCount);
-        console.log(router);
+        console.log(requestHandler.moduleCount);
+        console.log(requestHandler);
     }else{
         console.log(err);
     }
